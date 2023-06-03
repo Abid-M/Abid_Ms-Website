@@ -1,0 +1,147 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-md sticky-top" style="background-color: rgba(255, 255, 255, 0.95);">
+        <div class="container">
+            <a class="navbar-brand align-items-center lead" href="/" style="font-size: 2rem;">
+                Abid Miah
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item me-3">
+                    <a class="lead navtext animated-underline" style="text-decoration: none;" href="/" style="font-size: 1.2rem;">Home</a>
+                  </li>
+                  <li class="nav-item me-3">
+                    <a class="lead navtext animated-underline" style="text-decoration: none;" href="/about-skills" style="font-size: 1.2rem;">About/Skills</a>
+                  </li>
+                  <li class="nav-item me-3">
+                    <a class="lead navtext animated-underline" style="text-decoration: none;" href="/education" style="font-size: 1.2rem;">Education</a>
+                  </li>
+                  <li class="nav-item me-3">
+                    <a class="lead navtext animated-underline" style="text-decoration: none;" href="/projects" style="font-size: 1.2rem;">Exp/Projects</a>
+                  </li>
+                  <li class="nav-item me-3">
+                    <a class="lead navtext animated-underline" style="text-decoration: none;" href="/contact" style="font-size: 1.2rem;">Contact</a>
+                  </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<aside>
+    <div class="iconbar">
+      <a href="https://www.linkedin.com/in/abid-miah-728268198/" target= _blank class="linkedin"><i class="fa-brands fa-linkedin-in fa-fade"></i></a>
+      <a href="https://www.instagram.com/am1702_/" target=_blank class="instagram"><i class="fa-brands fa-instagram fa-fade"></i></a>
+      <a href="https://www.youtube.com/c/xtremehdgamer" target=_blank class="youtube"><i class="fa-brands fa-youtube fa-fade"></i></a>
+      <a href="https://github.com/Abid-M" target=_blank class="github"><i class="fa-brands fa-github fa-fade"></i></a>
+    </div>
+  </aside>
+
+  <div class="copyright font-weight-bold">
+    <p class="font-weight-bold rounded px-1" style="background-color: rgba(255, 255, 255, 0.5);">
+      <i style="color:black">Copyright &copy;</i> 2023 <i>Abid Miah</i>
+    </p>
+  </div>
+  {% block content %}
+  {% endblock %}
+</body>
+</html>
+
+<style>
+    .copyright {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        padding: 10px;
+      }
+      
+    body {
+        background-image: url(../static/bg4.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+        
+    .back {
+          background-color: rgba(255, 255, 255, 0.75);
+    }
+
+    
+    .animated-underline {
+        position: relative;
+        display: inline-block;
+        color: black;
+        text-decoration: none;
+    }
+
+    .animated-underline::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: black;
+        transform-origin: bottom left;
+        transition: transform 0.3s ease;
+    }
+
+    .animated-underline:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+    .animated-underline:hover {
+        font-weight: bold; 
+
+    }
+
+
+/*iconbar social media style*/
+.iconbar {
+  position: fixed;
+  top: 35%;
+}
+
+.iconbar a {
+  display: block;
+  text-align: center;
+  padding: 16pt;
+  transition: all 0.4s ease;
+  color: white;
+  font-size: 20pt;
+}
+
+.iconbar a:hover {
+  background-color: #000;
+}
+
+.linkedin {
+  background: #007bb5;
+}
+
+.instagram {
+  background: #E1306C;
+}
+
+.youtube {
+  background: #ff0000;
+}
+
+.github {
+  background: #333;
+}
+        
+</style>
+    

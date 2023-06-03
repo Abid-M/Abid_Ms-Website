@@ -1,0 +1,198 @@
+{% extends 'nav.html' %}
+{% block content %}
+{% load static %}
+<html lang="en">
+<head>
+  <script>
+    window.addEventListener("load", function() {
+        // Add a class to the body to trigger the animation
+        document.querySelector('.zooms').classList.add('zoom-in');
+    });
+  </script>
+  <style>
+    .zooms {
+        transform: scale(0.75);
+        transition: transform 1s;
+    }
+
+    .zooms.zoom-in {
+        transform: scale(1);
+    }
+
+  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects & Employment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    
+</head>
+<body>
+    <div class="container-fluid w-75 text-dark my-4 p-4 overflow-x zooms" style="background-color: rgba(255, 255, 255, 0.75);">
+        <ul class="nav nav-tabs justify-content-center align-items-center" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects" type="button" role="tab" aria-controls="projects" aria-selected="true">Projects</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#employment" type="button" role="tab" aria-controls="employment" aria-selected="false">Employment</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="projects" role="tabpanel" aria-labelledby="projects-tab"> <br> 
+                <div class="container">
+                    <div class="row mb-4">
+                      <div class="col-md-4 mb-3">
+                        <div class="card shadow-lg justify-content-center text-center align-items-center">
+                          <a href="https://re-energise.xyz/" target="__blank"><img src="{% static 'energydisplay.PNG' %}" class="card-img-top" alt="Energy Management screenshot"></a> 
+                          <div class="card-body">
+                            <h5 class="card-title">Energy Management System</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Django, Python / HTML / Bootstrap,CSS / JavaScript</h6>
+                            <p class="card-text">FYP Web Application, that helps you to monitor and track your energy usage. The system is designed to help you add,identify household appliances with budget limits and a community forum.                             <a href="https://re-energise.xyz/" target= "__blank" class="card-text">[https://re-energise.xyz/]</a>
+                            </p>
+                            <a href="https://github.com/Abid-M/Energy-Management-System" target="__blank" class="btn btn-info">Github <i class="fa-brands fa-github"></i></a>
+                        </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <div class="card shadow-lg justify-content-center text-center align-items-center">
+                            <a href="https://github.com/Abid-M/eBayDupe" target="__blank"><img src="{% static 'dupeebay.PNG' %}" class="card-img-top" alt="Auction System Screenshot"></a> 
+                            <div class="card-body">
+                            <h5 class="card-title">Auction System</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Django, Python / Vue / HTML / Bootstrap,CSS / JavaScript</h6>
+                            <p class="card-text">eBay Dupe web application. Developed with Django backend & Vue frontend. Includes auto email sending, using Ajax where required with Vue and fetch API	.</p>
+                            <a href="https://github.com/Abid-M/eBayDupe" target="__blank" class="btn btn-info">Github <i class="fa-brands fa-github"></i></a>
+                        </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="card shadow-lg justify-content-center text-center align-items-center">
+                            <a href="{% static 'VB.net-Writeup.pdf' %}" target="__blank"><img src="{% static 'vbPOLICE.PNG' %}" class="card-img-top" alt="VB.net Code"></a> 
+                          <div class="card-body">
+                            <h5 class="card-title">Police Management System</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">VB.net / SQL</h6>
+                            <p class="card-text">Visual Basic Program, utlising the use of map API with coding processes in SQL & adopting a systematic and methodical approach to writing code.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-md-4 mb-3">
+                            <div class="card shadow-lg justify-content-center text-center align-items-center">
+                                <a href="https://github.com/Abid-M/Mindlift-WellbeingApp-Prototype" target="__blank"><img src="{% static 'mindliftapp.gif' %}" style="width: 50%"  class="card-img-top text-center" alt="Mobile App Image"></a> 
+                              <div class="card-body">
+                                <h5 class="card-title">Well-being Mobile Application</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">React Native / Firebase</h6>
+                                <p class="card-text">Developed a prototype for a group mobile app, called Mindlift. Utilising React Native framework - javascript and Expo CLI. As well as backend firebase for storing users and appointments (feature).</p>
+                                <a href="https://github.com/Abid-M/Mindlift-WellbeingApp-Prototype" target="__blank" class="btn btn-info">Github <i class="fa-brands fa-github"></i></a>  
+                            </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 mb-3">
+                            <div class="card shadow-lg justify-content-center text-center align-items-center">
+                                <a href="https://github.com/Abid-M/racing-sim" target="__blank"><img src="{% static 'oopcode.PNG' %}" class="card-img-top text-center" alt="Mobile App Image"></a> 
+                              <div class="card-body">
+                                <h5 class="card-title">Racing Simulator Text Game</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Java</h6>
+                                <p class="card-text">Implementation of object oriented concepts in my racing game simulator program, such as class hierarchy, inheritance, polymorphism and abstraction.</p>
+                                <a href="https://github.com/Abid-M/racing-sim" target="__blank" class="btn btn-info">Github <i class="fa-brands fa-github"></i></a>  
+                            </div>
+                            </div>
+                        </div>
+                      <div class="col-md-4 mb-3">
+                        <div class="card shadow-lg justify-content-center text-center align-items-center">
+                            <a href="https://github.com/Abid-M/help-bot" target="__blank"><img src="{% static 'ppcode.PNG' %}" class="card-img-top text-center" alt="Procedural Java Code"></a> 
+                          <div class="card-body">
+                            <h5 class="card-title">Help-Bot with Triggers/Responses</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Java</h6>
+                            <p class="card-text">Developed a java program in a procedural way, including file input/output, that allowed users to ask certain questions determined by trigger words and in response get a useful reply by the program in relation to the question.</p>
+                            <a href="https://github.com/Abid-M/help-bot" target="__blank" class="btn btn-info">Github <i class="fa-brands fa-github"></i></a>  
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-md-4 mb-3">
+                            <div class="card shadow-lg justify-content-center text-center align-items-center">
+                                <a href="{% static 'DBProj.pdf' %}" target="__blank"><img src="{% static 'db.png' %}" class="card-img-top" alt="DB Screenshot"></a> 
+                              <div class="card-body">
+                                <h5 class="card-title">Database Design G Project</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">SQL</h6>
+                                <p class="card-text">Led a project involving the development of entity-relationship (ER) database model and relational 
+                                    database (normalised in 3NF) based on a covid scenario database requirements.</p>
+                              </div>
+                            </div>
+                          </div>
+                        
+                          <div class="col-md-4 mb-3">
+                            <div class="card shadow-lg justify-content-center text-center align-items-center">
+                                <a href="https://github.com/Abid-M/racing-sim" target="__blank"><img src="{% static 'personal.PNG' %}" class="card-img-top text-center" alt="Personal Website"></a> 
+                              <div class="card-body">
+                                <h5 class="card-title">Personal Website</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Django, Python / Bootstrap,CSS / JavaScript</h6>
+                                <p class="card-text">My personal portfolio website, which I plan to keep up to date with projects and experiences.</p>
+                                <a href="https://github.com/Abid-M/racing-sim" target="__blank" class="btn btn-info">Github <i class="fa-brands fa-github"></i></a>  
+                            </div>
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+            </div>
+
+
+            <div class="tab-pane fade" id="employment" role="tabpanel" aria-labelledby="employment-tab">...</div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+          </div>
+    </div>
+    
+</body>
+</html>
+
+<style>
+.sub {
+  font-size: 13pt;
+  color: black;
+  letter-spacing: 1pt;
+}
+.title {
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+
+    .photo {
+        margin-top: 2rem;
+    }
+
+    .about {
+        margin-top: 2rem;
+    }
+
+    .about p {
+        margin-bottom: 1rem;
+    }
+
+    .about b {
+        font-weight: bold;
+    }
+
+
+    .skills {
+        margin-top: 2rem;
+    }
+
+    .hardskills th,
+    .hardskills td {
+        vertical-align: middle;
+        padding: 1rem;
+    }
+
+    .softskills th,
+    .softskills td {
+        padding: 0.5rem;
+    }
+</style>
+{% endblock %}
+    
