@@ -38,13 +38,40 @@
             <hr>
         </div>
     </div>
-
-    <form action="https://formsubmit.co/abid1702@outlook.com" method="POST">
-        <input type="text" name="name" required>
-        <input type="email" name="email" required>
-        <button type="submit">Send</button>
-    </form>
-    
+    <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6 bg-light p-4 shadow-lg rounded">
+            <h2 class="mb-3">CONTACT ME</h2>
+            <hr>
+            <form action="https://formspree.io/f/mpzegdwl" method="post">
+              <div class="mb-3">
+                <label for="Name" class="form-label lead">Name <span style="color:red">*</span> </label>
+                <input type="text" class="form-control" id="name" name="Name" placeholder="Name" required>
+              </div>
+              <div class="mb-3">
+                <label for="Organisation" class="form-label lead">Organisation Name</span> </label>
+                <input type="text" class="form-control" id="org" name="Organisation" placeholder="Organisation Name">
+              </div>
+              <div class="mb-3">
+                <label for="Email" class="form-label lead">Email Address <span style="color:red">*</span> </label>
+                <input type="email" class="form-control" id="email" name="Email" placeholder="Your Email Address" required>
+              </div>
+              <div class="mb-3">
+                <label for="Subject" class="form-label lead">Subject <span style="color:red">*</span> </label>
+                <input type="text" class="form-control" id="subject" name="Subject" placeholder="Subject" required>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label lead">Message <span style="color:red">*</span> </label>
+                <textarea class="form-control" id="message" name="Message" rows="5" placeholder="Enter your message" required></textarea>
+              </div>
+              <div class="d-grid gap-2 col-6 mx-auto">
+                <button type="submit" class="btn btn-info shadow-lg"> <span class="lead">Send</span> </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      
     </section>
   </div>
 </body>
