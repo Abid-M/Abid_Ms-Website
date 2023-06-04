@@ -13,3 +13,6 @@ def education(request):
 
 def projects(request):
     return render(request, 'projects.html')
+
+def contact(request):
+    return render(request, 'contact.html')
