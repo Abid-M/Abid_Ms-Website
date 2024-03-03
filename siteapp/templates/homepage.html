@@ -41,12 +41,16 @@
     
 </head>
 <body>
-    <section class="d-flex zooms flex-column min-vh-100 justify-content-center align-items-center">    
+  <video autoplay loop muted plays-inline class="background-clip">
+    <source src="{% static 'bg-vid.mp4' %}" type="video/mp4">
+  </video>   
+    <section class="d-flex zooms flex-column min-vh-100 justify-content-center align-items-center"> 
     <div class="container">
         <div class="col-md-11 p-2 mx-auto rounded back text-dark shadow-lg back justify-content-center">
         <div class="row text-center justify-content-center">
             <div class="row justify-content-center p-2 ps-4">
                 <h1 class="display-2">Abid Miah</h1>
+                <h2 class="display-6 fw-bold text-primary">Junior Software Engineer in Test</h2>
                 <span style="width:75%">👋 Hi! I'm Abid, a Junior SDET Consultant, driven by a profound passion for technology. My goal is to achieve success in life and my career, striving to reach my fullest potential and make a lasting impact in the dynamic world of technology.</span>                            
               </div>
             <hr class="w-75">
@@ -90,6 +94,13 @@
 </html>
 
 <style>
+    .background-clip {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+    
     .copyright {
         position: fixed;
         bottom: 0;
@@ -124,7 +135,7 @@
         height: 2px;
         bottom: 0;
         left: 0;
-        background-color: red;
+        background-color: #40E0D0;
         transform-origin: bottom left;
         transition: transform 0.3s ease;
     }
