@@ -6,7 +6,7 @@ I plan to keep up to date.
 ## Purpose
 The purpose of this website is to provide a central hub where I can highlight my projects, share my experiences, and connect with others in the tech community. Whether you're a recruiter looking for potential candidates, a fellow developer seeking collaboration opportunities, or just someone curious about what I do, this website serves as a gateway to my professional identity.
 
-## Features
+## Pages
 - **About/Skills Page:** Explore information about my background, skills, and expertise. Learn about my professional journey, technical proficiencies, and areas of interest.
 
 - **Education Page:** Discover my academic background, including degrees, certifications, and relevant courses. Understand how my education has shaped my skills and career path.
