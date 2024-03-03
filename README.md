@@ -22,8 +22,6 @@ The purpose of this website is to provide a central hub where I can highlight my
 
 - **Django (Python):** The backend of the website is powered by Django, a high-level Python web framework that enables rapid development and scalability.
 
-- **GitHub Pages:** The website is hosted using GitHub Pages, making it easy to deploy and manage.
-
 ## Feedback
 If you have any feedback, suggestions, or questions about my portfolio website, please don't hesitate to reach out. Your input helps me improve and grow as a developer.
 
