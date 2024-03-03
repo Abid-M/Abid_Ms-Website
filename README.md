@@ -1,7 +1,7 @@
 # Personal Portfolio Website
 
 This is a my personal portfolio website where I showcase my work, experiences, and skills to potential employers, clients, or anyone interested in my journey.
-I plan to keep up to date.
+I plan to keep up to date. https://abid-miah.info/
 
 ## Purpose
 The purpose of this website is to provide a central hub where I can highlight my projects, share my experiences, and connect with others in the tech community. Whether you're a recruiter looking for potential candidates, a fellow developer seeking collaboration opportunities, or just someone curious about what I do, this website serves as a gateway to my professional identity.
