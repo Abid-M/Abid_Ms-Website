@@ -20,14 +20,21 @@
   </script>
   <style>
     .zooms {
+      transform: scale(0.75);
+      transition: transform 1s;
+      animation: zoomAnimation 1s forwards;
+      /* Apply animation */
+    }
+
+    @keyframes zoomAnimation {
+      from {
         transform: scale(0.75);
-        transition: transform 1s;
-    }
+      }
 
-    .zooms.zoom-in {
+      to {
         transform: scale(1);
+      }
     }
-
   </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

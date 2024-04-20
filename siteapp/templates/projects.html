@@ -19,16 +19,26 @@
       document.querySelector('.zooms').classList.add('zoom-in');
     });
   </script>
+
   <style>
     .zooms {
       transform: scale(0.75);
       transition: transform 1s;
+      animation: zoomAnimation 1s forwards;
+      /* Apply animation */
     }
 
-    .zooms.zoom-in {
-      transform: scale(1);
+    @keyframes zoomAnimation {
+      from {
+        transform: scale(0.75);
+      }
+
+      to {
+        transform: scale(1);
+      }
     }
   </style>
+
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,7 +58,7 @@
 
 <body>
   <div class="container-fluid w-75 text-dark my-4 p-4 overflow-x zooms"
-    style="background-color: rgba(255, 255, 255, 0.75);">
+    style="background-color: rgba(255, 255, 255, 0.75);" id="mainn">
     <ul class="nav nav-tabs justify-content-center align-items-center" id="myTab" role="tablist">
       <li class="nav-item" role="presentation">
         <button class="nav-link active fw-bold" id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects"
@@ -73,10 +83,12 @@
                 <div class="card-body">
                   <h5 class="card-title">eCommerce Automated Tests w/ Selenium</h5>
                   <h6 class="card-subtitle mb-2 text-muted">C# / .NET Core / NUnit / SpecFlow / Selenium</h6>
-                  <p class="card-text">Automated End-to-end tests in a Behavior-Driven Development (BDD) style using SpecFlow for an e-commerce website. 
-                    The tests simulate user interactions like purchasing items, applying discounts, and verifying order details.<br></p>
-                  <a href="https://github.com/Abid-M/uk.co.nfocus.ecommerceproject" target="__blank" class="btn btn-info">Github <i
-                      class="fa-brands fa-github"></i></a>
+                  <p class="card-text">Automated End-to-end tests in a Behavior-Driven Development (BDD) style using
+                    SpecFlow for an e-commerce website.
+                    The tests simulate user interactions like purchasing items, applying discounts, and verifying order
+                    details.<br></p>
+                  <a href="https://github.com/Abid-M/uk.co.nfocus.ecommerceproject" target="__blank"
+                    class="btn btn-info">Github <i class="fa-brands fa-github"></i></a>
                 </div>
               </div>
             </div>
@@ -421,7 +433,14 @@
 
       </div>
     </div>
-
+    <script>
+      window.addEventListener('load', function () {
+        var element = document.getElementById('mainss');
+        setTimeout(function () {
+          element.classList.add('zoom-in');
+        }, 100); // Adjust delay as needed
+      });
+    </script>
 </body>
 
 </html>

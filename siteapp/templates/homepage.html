@@ -1,88 +1,106 @@
 {% load static %}
 <html lang="en">
+
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EM7BCTMFFP"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-  
-      gtag('config', 'G-EM7BCTMFFP');
-    </script>
-    <script>
-        window.addEventListener("load", function() {
-            // Add a class to the body to trigger the animation
-            document.querySelector('.zooms').classList.add('zoom-in');
-        });
-      </script>
-      <style>
-        .zooms {
-            transform: scale(0.5);
-            transition: transform 1s;
-        }
-    
-        .zooms.zoom-in {
-            transform: scale(1);
-        }
-    
-      </style>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Abid Miah - Portfolio">
-    <meta property="og:image" content="https://re-energise.xyz/static/images/energylogo2.png">
-    <meta property="og:url" content="https//re-energise.xyz">
-    <title>Abid's Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.png' %}" >
-    
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EM7BCTMFFP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-EM7BCTMFFP');
+  </script>
+  <script>
+    window.addEventListener("load", function () {
+      // Add a class to the body to trigger the animation
+      document.querySelector('.zooms').classList.add('zoom-in');
+    });
+  </script>
+  <style>
+    .zooms {
+      transform: scale(0.75);
+      transition: transform 1s;
+      animation: zoomAnimation 1s forwards;
+      /* Apply animation */
+    }
+
+    @keyframes zoomAnimation {
+      from {
+        transform: scale(0.75);
+      }
+
+      to {
+        transform: scale(1);
+      }
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Abid Miah - Portfolio">
+  <meta property="og:image" content="https://re-energise.xyz/static/images/energylogo2.png">
+  <meta property="og:url" content="https//re-energise.xyz">
+  <title>Abid's Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link rel="shortcut icon" type="image/png" href="{% static 'favicon.png' %}">
+
 </head>
+
 <body>
   <video autoplay loop muted plays-inline class="background-clip">
     <source src="{% static 'bg-vid.mp4' %}" type="video/mp4">
-  </video>   
-    <section class="d-flex zooms flex-column min-vh-100 justify-content-center align-items-center"> 
+  </video>
+  <section class="d-flex zooms flex-column min-vh-100 justify-content-center align-items-center">
     <div class="container">
-        <div class="col-md-11 p-2 mx-auto rounded back text-dark shadow-lg back justify-content-center">
+      <div class="col-md-10 p-2 mx-auto rounded back text-dark shadow-lg back justify-content-center">
         <div class="row text-center justify-content-center">
-            <div class="row justify-content-center p-2 ps-4">
-                <h1 class="display-2">Abid Miah</h1>
-                <h2 class="display-6 fw-bold text-primary">Junior Software Engineer in Test</h2>
-                <span style="width:75%">👋 Hi! I'm Abid, a Junior SDET Consultant, driven by a profound passion for technology. My goal is to achieve success in life and my career, striving to reach my fullest potential and make a lasting impact in the dynamic world of technology.</span>                            
-              </div>
-            <hr class="w-75">
-            <div class="row mt-2">
-                <div class="col-md-3 text-center mb-3">
-                    <a href="/" class="fw-bold animated-underline lead">Home</a>
-                </div>
-                <div class="col-md-3 text-center mb-3">
-                    <a href="/about-skills" class="fw-bold animated-underline lead">About/Skills</a>
-                </div>
-                <div class="col-md-3 text-center mb-3">
-                    <a href="/education" class="fw-bold animated-underline lead">Education</a>
-                </div>
-                <div class="col-md-3 text-center mb-3">
-                    <a href="/projects" class="fw-bold animated-underline lead">Experience</a>
-                </div>
-                <div class="col-md text-center mb-3">
-                    <a href="/contact" class="fw-bold animated-underline lead" style="color:grey">Contact</a>
-                </div>
+          <div class="row justify-content-center p-2 ps-4">
+            <h1 class="display-2">Abid Miah</h1>             
+            <h2 class="display-6 fw-bold text-primary">Junior Software Engineer in Test</h2>
+            <span style="width:75%">👋 Hi! I'm Abid, a Junior SDET Consultant, driven by a profound passion for
+              technology. My goal is to achieve success in life and my career, striving to reach my fullest potential
+              and make a lasting impact in the dynamic world of technology. <a href="/contact" class="fw-bold animated-underline" style="color:grey">Get in touch..</a></span>
+          </div>
+          <hr class="w-75">
+          <div class="row mt-2">
+            <div class="col-md text-center mb-3">
+              <a href="/" class="fw-bold animated-underline lead">Home</a>
             </div>
+            <div class="col-md text-center mb-3">
+              <a href="/about-skills" class="fw-bold animated-underline lead">About/Skills</a>
+            </div>
+            <div class="col-md text-center mb-3">
+              <a href="/education" class="fw-bold animated-underline lead">Education</a>
+            </div>
+            <div class="col-md text-center mb-3">
+              <a href="/projects" class="fw-bold animated-underline lead">Experience</a>
+            </div>
+            <div class="col-md text-center mb-3">
+              <a href="/career-blog" class="fw-bold animated-underline lead">Career Blog</a>
+           </div>
+           <hr style="visibility: hidden;">
+          </div>
         </div>
-        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<aside>
-  <div class="iconbar">
-    <a href="https://www.linkedin.com/in/abid-m/" target= _blank class="linkedin"><i class="fa-brands fa-linkedin-in fa-fade"></i></a>
-    <a href="https://github.com/Abid-M" target=_blank class="github"><i class="fa-brands fa-github fa-fade"></i></a>
-    <a href="https://www.paypal.com/paypalme/abzukltd/" target=_blank class="paypal"><i class="fa-brands fa-paypal fa-fade"></i></a>
-    <a href="https://www.youtube.com/c/xtremehdgamer" target=_blank class="youtube"><i class="fa-brands fa-youtube fa-fade"></i></a>
-  </div>
+  <aside>
+    <div class="iconbar">
+      <a href="https://www.linkedin.com/in/abid-m/" target=_blank class="linkedin"><i
+          class="fa-brands fa-linkedin-in fa-fade"></i></a>
+      <a href="https://github.com/Abid-M" target=_blank class="github"><i class="fa-brands fa-github fa-fade"></i></a>
+      <a href="https://www.paypal.com/paypalme/abzukltd/" target=_blank class="paypal"><i
+          class="fa-brands fa-paypal fa-fade"></i></a>
+      <a href="https://www.youtube.com/c/xtremehdgamer" target=_blank class="youtube"><i
+          class="fa-brands fa-youtube fa-fade"></i></a>
+    </div>
   </aside>
 
   <div class="copyright font-weight-bold">
@@ -91,104 +109,103 @@
     </p>
   </div>
 </body>
+
 </html>
 
 <style>
-    .background-clip {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      z-index: -1;
-    }
-    
-    .copyright {
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        padding: 10px;
-      }
-      
-    body {
-        background-image: url(../static/bg4.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-    }
-        
-    .back {
-          background-color: rgba(255, 255, 255, 0.75);
-    }
-    
-    .animated-underline {
-        position: relative;
-        display: inline-block;
-        color: black;
-        text-decoration: none;
-        transition: font-size 0.3s ease;
-    }
+  .background-clip {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
 
-    .animated-underline::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        transform: scaleX(0);
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: #40E0D0;
-        transform-origin: bottom left;
-        transition: transform 0.3s ease;
-    }
+  .copyright {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+  }
 
-    .animated-underline:hover::after {
-        transform: scaleX(1);
-        transform-origin: bottom left;
-    }
+  body {
+    background-image: url(../static/bg4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
 
-    .animated-underline:hover {
-        font-size: 1.1em;
-        color: inherit;
-    }
+  .back {
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+
+  .animated-underline {
+    position: relative;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    transition: font-size 0.3s ease;
+  }
+
+  .animated-underline::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #40E0D0;
+    transform-origin: bottom left;
+    transition: transform 0.3s ease;
+  }
+
+  .animated-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .animated-underline:hover {
+    font-size: 1.1em;
+    color: inherit;
+  }
 
 
-/*iconbar social media style*/
-.iconbar {
-  position: fixed;
-  top: 35%;
-}
+  /*iconbar social media style*/
+  .iconbar {
+    position: fixed;
+    top: 35%;
+  }
 
-.iconbar a {
-  display: block;
-  text-align: center;
-  padding: 16pt;
-  transition: all 0.4s ease;
-  color: white;
-  font-size: 20pt;
-}
+  .iconbar a {
+    display: block;
+    text-align: center;
+    padding: 16pt;
+    transition: all 0.4s ease;
+    color: white;
+    font-size: 20pt;
+  }
 
-.iconbar a:hover {
-  background-color: #000;
-}
+  .iconbar a:hover {
+    background-color: #000;
+  }
 
-.linkedin {
-  background: #007bb5;
-}
+  .linkedin {
+    background: #007bb5;
+  }
 
-.instagram {
-  background: #E1306C;
-}
+  .instagram {
+    background: #E1306C;
+  }
 
-.youtube {
-  background: #ff0000;
-}
+  .youtube {
+    background: #ff0000;
+  }
 
-.github {
-  background: #333;
-}
+  .github {
+    background: #333;
+  }
 
-.paypal {
-  background: #3b7bbf;
-}
-        
+  .paypal {
+    background: #3b7bbf;
+  }
 </style>
-    
