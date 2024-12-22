@@ -1,0 +1,255 @@
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Surprise Gift - Chelsea Stadium Tour</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            background: linear-gradient(135deg, #001C55, #034694);
+            color: #fff;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            text-align: center;
+            position: relative;
+            padding: 20px;
+        }
+        .header-text {
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: #FFD700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        .gift-box {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            width: 180px;
+            height: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            cursor: pointer;
+            position: relative;
+            animation: bounce 1.5s infinite;
+        }
+        .gift-box::after {
+            content: '🎁';
+            font-size: 50px;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .hint-screen, .reveal-screen {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 1s ease-in-out;
+            padding: 10px;
+        }
+        .hint-screen h2, .reveal-screen h2 {
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        .hint {
+            margin: 10px 0;
+            font-size: 16px;
+            display: none; /* Initially hide all hints */
+        }
+        .slider-container {
+            margin-top: 20px;
+            width: 80%;
+            max-width: 300px;
+            position: relative;
+        }
+        .slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 20px;
+            background: #FFD700;
+            border-radius: 10px;
+            outline: none;
+            transition: background 0.3s;
+        }
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 30px;
+            height: 30px;
+            background: #FFA500;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .stadium-animation {
+            margin-top: 20px;
+            width: 90%;
+            max-width: 300px;
+            height: 180px;
+            background: url('https://i.ytimg.com/vi/FIoQrNmFQ-k/maxresdefault.jpg') no-repeat center/cover;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .chelsea-gif {
+            margin-top: 20px;
+            width: 90%;
+            max-width: 300px;
+            height: 180px;
+            background: url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXp0Y2Fjanl6NHQxZmZpOXE2bWZkNDY4bGNsd3k4bTd2a2xjNm9idyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XEdgJpPEZPDqI2HVm3/giphy.webp') no-repeat center/cover;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .confetti {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #f0f0f0, #ffcc00);
+            color: #2c2c2c;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: all 0.4s;
+            transform: translate(-50%, -50%) scale(0);
+            border-radius: 50%;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+        }
+
+        .btn:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .btn:active {
+            transform: scale(0.95);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-text">🎉 To Suto Appi, from Abid 👊🏽</div>
+        <div class="gift-box" id="giftBox"></div>
+        
+        <div class="hint-screen" id="hintScreen">
+            <h2>🧩 Solve the Mystery</h2>
+            <div class="hint" id="hint1">1️⃣ It's related to one of your gifts.</div>
+            <div class="hint" id="hint2">2️⃣ This is a place where history is written in blue, not red.</div>
+            <div class="hint" id="hint3">3️⃣ Cold ____.</div>
+            <button id="nextHintBtn" class="btn">Next Hint</button>
+            <div class="slider-container">
+                <span>Swipe to unlock!</span>
+                <input type="range" min="0" max="100" value="0" class="slider" id="unlockSlider">
+            </div>
+        </div>
+        
+        <div class="reveal-screen" id="revealScreen">
+            <h2>🙌🏽 You've Unlocked the Gift! 🎊</h2>
+            <a href="{% static 'Chelsea FC Stadium Tours E-Voucher (1).pdf' %}" target="_blank" class="btn">Chelsea Stadium Tour</a>
+            <div class="stadium-animation"></div>
+            <div class="chelsea-gif"></div>
+        </div>
+    </div>
+
+    <canvas class="confetti" id="confetti"></canvas>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script>
+        const giftBox = document.getElementById('giftBox');
+        const hintScreen = document.getElementById('hintScreen');
+        const revealScreen = document.getElementById('revealScreen');
+        const unlockSlider = document.getElementById('unlockSlider');
+        const nextHintBtn = document.getElementById('nextHintBtn');
+        let hintIndex = 0;
+        const hints = document.querySelectorAll('.hint');
+
+        giftBox.addEventListener('click', () => {
+            giftBox.style.display = 'none';
+            hintScreen.style.display = 'flex';
+            nextHintBtn.style.display = 'inline-block';
+            launchConfetti();
+        });
+
+        nextHintBtn.addEventListener('click', () => {
+            if (hintIndex < hints.length) {
+                hints[hintIndex].style.display = 'block'; // Show the next hint
+                hintIndex++;
+            } else {
+                nextHintBtn.style.display = 'none'; // Hide the button when all hints are shown
+            }
+        });
+
+        unlockSlider.addEventListener('input', () => {
+            if (unlockSlider.value == 100) {
+                hintScreen.style.display = 'none';
+                revealScreen.style.display = 'flex';
+                launchConfetti();
+            }
+        });
+
+        function launchConfetti() {
+            confetti({
+                particleCount: 200,
+                spread: 100,
+                origin: { y: 0.6 }
+            });
+        }
+    </script>
+</body>
+</html>
+{% endblock %}
