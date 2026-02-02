@@ -20,7 +20,3 @@ def careerblog(request):
 
 def contact(request):
     return render(request, 'contact.html')
-
-@login_required
-def sutoAppi(request):
-    return render(request, 'suto-appi.html')
